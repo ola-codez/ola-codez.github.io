@@ -3,18 +3,17 @@ const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Sa
 
 // get the value of today's name
 const today = new Date().getDay();
+// const today = new Date().getDay();
 
 // extract the name from the weekday array
 const currentDayOfTheWeek = weekday[today]
+// console.log(currentDayOfTheWeek);
 
-
-const hours = new Date().getHours()
-const minutes = new Date().getMinutes()
-
-const currentTime = `${hours}:${minutes}`
-
+const utcTime = new Date() //.toJSON().replace("T"," ").replace("Z"," ")
+// console.log(utcTime);
 $(document).ready(
     function () {
-        $("#currentUTCtime").html(currentTime)
+        $("#currentUTCtime").html(utcTime)
+        $("#currentdayoftheweek").html(currentDayOfTheWeek)
     }
 )

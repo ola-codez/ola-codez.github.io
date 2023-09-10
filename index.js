@@ -9,11 +9,11 @@ const today = new Date().getDay();
 const currentDayOfTheWeek = weekday[today]
 // console.log(currentDayOfTheWeek);
 
-const utcTime = new Date() //.toJSON().replace("T"," ").replace("Z"," ")
-// console.log(utcTime);
+const utcTime = new Date().toISOString()
+
 $(document).ready(
     function () {
-        $("#currentUTCtime").html(utcTime)
-        $("#currentdayoftheweek").html(currentDayOfTheWeek)
+       $("#currentUTCtime").html(utcTime)
+       $("#currentdayoftheweek").html(currentDayOfTheWeek)
     }
 )
